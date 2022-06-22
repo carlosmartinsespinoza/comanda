@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navega_servico_atendimento"
+    app:startDestination="@id/mesaFragment">
+
+    <fragment
+        android:id="@+id/atendimentoFragment"
+        android:name="com.mentooutsourcing.iservice.fragment.ui.AtendimentoFragment"
+        android:label="fragment_atendimento"
+        tools:layout="@layout/fragment_atendimento" >
+        <action
+            android:id="@+id/action_atendimentoFragment_to_produtoFragment"
+            app:destination="@id/produtoFragment" />
+        <action
+            android:id="@+id/action_atendimentoFragment_to_mesaFragment"
+            app:destination="@id/mesaFragment" />
+        <argument
+            android:name="idmesa"
+            app:argType="integer" />
+        <argument
+            android:name="idcomanda"
+            app:argType="integer" />
+        <argument
+            android:name="numeromesa"
+            app:argType="string" />
+        <argument
+            android:name="valorcomanda"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/produtoFragment"
+        android:name="com.mentooutsourcing.iservice.fragment.ui.ProdutoFragment"
+        android:label="fragment_produto"
+        tools:layout="@layout/fragment_produto" >
+        <action
+            android:id="@+id/action_produtoFragment_to_atendimentoFragment"
+            app:destination="@id/atendimentoFragment" />
+        <argument
+            android:name="idmesa"
+            app:argType="integer" />
+        <argument
+            android:name="idcomanda"
+            app:argType="integer" />
+        <argument
+            android:name="numeromesa"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/mesaFragment"
+        android:name="com.mentooutsourcing.iservice.fragment.ui.mesaFragment"
+        android:label="fragment_mesa"
+        tools:layout="@layout/fragment_mesa" >
+        <action
+            android:id="@+id/action_mesaFragment_to_atendimentoFragment"
+            app:destination="@id/atendimentoFragment" />
+    </fragment>
+</navigation>

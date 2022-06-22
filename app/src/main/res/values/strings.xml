@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">iService</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="numero_da_mesa">%1$s</string>
+    <string name="imagem_mesa">imagem da mesa</string>
+    <string name="nome_do_produto">%1$s</string>
+    <string name="descricao_do_produto">%1$s</string>
+    <string name="preco_do_produto">R$ %1$d</string>
+    <string name="descricao_do_btn_adiciona">Adiciona Intens ao Atendimento da Mesa</string>
+    <string name="valor">R$ %1$s</string>
+    <string name="comandaItemCriteria">eq.%1$d</string>
+    <string name="mesaIdCriteria">eq.%1$d</string>
+</resources>
